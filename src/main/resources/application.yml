@@ -1,0 +1,27 @@
+springdoc:
+  api-docs:
+    path: /custom-openapi-docs
+  swagger-ui:
+    title: Mi Documentación de API
+server:
+  port: 8092
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ups_electronic
+    username: postgres
+    password: prueba
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+
+info:
+  project:
+    version: "@project.version@"
+    title: "@project.name@"
+    description: "@project.description@"
